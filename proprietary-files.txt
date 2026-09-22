@@ -989,6 +989,27 @@ vendor/bin/ubwcconvert
 vendor/lib64/libubwcp.so
 
 # Widevine DRM
+odm/bin/hw/vendor.oplus.hardware.cryptoeng@1.0-service
+odm/etc/init/vendor.oplus.hardware.cryptoeng@1.0-service_FDE.rc
+odm/etc/permissions/vendor-oplus-hardware-cryptoeng.xml
+odm/etc/vintf/manifest/manifest_oplus_cryptoeng.xml
+odm/lib64/lib_cryptoeng_api.so
+odm/lib64/liboemcrypto.so
+odm/lib64/libqsee_keybox_ca.so
+odm/lib64/vendor.oplus.hardware.cryptoeng-V1-ndk.so
+odm/lib64/vendor.oplus.hardware.cryptoeng@1.0.so
+odm/lib64/vendor.oplus.hardware.fido.fido2ca-V1-ndk.so
+odm/lib64/vendor.oplus.hardware.fido.fidoca-V1-ndk.so
+odm/vendor/firmware/cryptoeng.b00
+odm/vendor/firmware/cryptoeng.b01
+odm/vendor/firmware/cryptoeng.b02
+odm/vendor/firmware/cryptoeng.b03
+odm/vendor/firmware/cryptoeng.b04
+odm/vendor/firmware/cryptoeng.b05
+odm/vendor/firmware/cryptoeng.b06
+odm/vendor/firmware/cryptoeng.b07
+odm/vendor/firmware/cryptoeng.b08
+odm/vendor/firmware/cryptoeng.mdt
 vendor/apex/com.google.android.widevine.nonupdatable.apex
 vendor/etc/vintf/manifest/android.hardware.drm-service.xml
 vendor/etc/oplus_Widevine_licenses.pfm

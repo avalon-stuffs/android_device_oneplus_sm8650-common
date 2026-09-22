@@ -65,6 +65,8 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    'odm/etc/permissions/vendor-oplus-hardware-cryptoeng.xml': blob_fixup()
+        .regex_replace(r'</permissions>\s*<permissions>', ''),
     'odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service_uff': blob_fixup()
         .add_needed('libshims_aidl_fingerprint_v3.oplus.so'),
     'odm/etc/gps.conf': blob_fixup()
