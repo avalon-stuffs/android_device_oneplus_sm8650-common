@@ -12,3 +12,10 @@ install_symlink {
     installed_location: "firmware/wlanmdsp.otaupdate",
     symlink_target: "/data/vendor/firmware/wlanmdsp.mbn",
 }
+
+install_symlink {
+    name: "liboemcrypto_symlink",
+    vendor: true,
+    installed_location: "lib64/liboemcrypto.so",
+    symlink_target: "/odm/lib64/liboemcrypto.so",
+}

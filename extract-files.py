@@ -56,6 +56,13 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    'odm/etc/init/vendor.oplus.hardware.cryptoeng@1.0-service_FDE.rc': blob_fixup()
+        .regex_replace(
+            r'    if \[ "\$\(getprop ro\.soc\.model\)" = "SM6450" \]; then\n        copy (.*?)\n        chmod (.*?)\n        chown (.*?)\n    fi',
+            r'\non property:sys.boot_completed=1 && property:persist.vendor.oplus.widevine.licenses=1 && property:ro.soc.model=SM6450\n    copy \1\n    chmod \2\n    chown \3',
+        ),
+    'odm/etc/permissions/vendor-oplus-hardware-cryptoeng.xml': blob_fixup()
+        .regex_replace(r'</permissions>\s*<permissions>', ''),
     'odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service_uff': blob_fixup()
         .add_needed('libshims_aidl_fingerprint_v3.oplus.so'),
     (
