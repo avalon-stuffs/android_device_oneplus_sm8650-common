@@ -73,8 +73,6 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace(r'(PROCESS_NAME=lowi-server\nPROCESS_ARGUMENT=\nPROCESS_STATE=)DISABLED', r'\1ENABLED'),
     'product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml': blob_fixup()
         .regex_replace('/my_product', '/product'),
-    'system/framework/WfdCommon.jar': blob_fixup()
-        .apktool_patch('blob-patches/WfdCommon.patch'),
     'system_ext/bin/horae': blob_fixup()
         .replace_needed('libprotobuf-cpp-lite.so', 'libprotobuf-cpp-lite-21.7.so'),
     'system_ext/etc/seccomp_policy/tcmd.policy': blob_fixup()
